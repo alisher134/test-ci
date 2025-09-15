@@ -7,27 +7,22 @@ permissions:
 on:
   pull_request:
     types: [opened, reopened, synchronize]
-
 jobs:
-  test:
+  code-review:
     runs-on: ubuntu-latest
     steps:
       - uses: anc95/ChatGPT-CodeReview@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # OpenAI
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_API_ENDPOINT: https://api.openai.com/v1
-          MODEL: gpt-4o
-
-          # общие настройки
+          MODEL: gpt-4o-mini
           LANGUAGE: Russian
           PROMPT: >
-            Please check if there are any confusions or irregularities
-            in the following code diff:
-
+            Проверь изменения в коде. Укажи ошибки, потенциальные баги,
+            нарушения best practices, а также дай рекомендации по
+            улучшению читаемости, производительности и безопасности.
           top_p: 1
-          temperature: 1
-          max_tokens: 10000
-          MAX_PATCH_LENGTH: 10000
+          temperature: 0.5
+          max_tokens: 4000
+          MAX_PATCH_LENGTH: 30000
           IGNORE_PATTERNS: /node_modules/**/*,*.md
