@@ -1,0 +1,30 @@
+.button {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 150ms ease-in-out, color 150ms ease-in-out;
+  border: 1px solid transparent;
+
+  &-primary {
+    background: $c-button-bg;
+    color: $c-button-text;
+
+    &:hover {
+      background: $c-dark-gray;
+    }
+  }
+
+  &-outline {
+    border: 1px solid $c-button-border;
+    color: $c-button-dark-text;
+
+    &:hover {
+      background: $c-button-bg;
+      color: $c-button-text;
+    }
+  }
+}

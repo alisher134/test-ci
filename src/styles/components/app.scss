@@ -1,0 +1,16 @@
+.container {
+  position: relative;
+  max-width: 550px;
+  margin: 0 auto;
+
+  .title {
+    color: $c-title;
+    text-align: left;
+  }
+
+  .active-todos {
+    color: $c-title;
+    font-weight: 700;
+    font-style: italic;
+  }
+}

@@ -1,0 +1,30 @@
+.todo-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-button {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  &-icon {
+    width: 30px;
+    height: 30px;
+    fill: $c-icon-fill;
+  }
+
+  &-input {
+    margin-bottom: 15px;
+  }
+
+  &-error {
+    position: absolute;
+    font-size: 14px;
+    top: 30px;
+    left: 0;
+    color: red;
+  }
+}

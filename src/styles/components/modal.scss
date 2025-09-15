@@ -1,0 +1,38 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 1000;
+}
+
+.modal {
+  position: fixed;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $c-modal-bg;
+  z-index: 1000;
+  border-radius: 10px;
+  padding: 35px;
+
+  &-header {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+
+  &-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  &-icon {
+    width: 25px;
+    height: 25px;
+  }
+}

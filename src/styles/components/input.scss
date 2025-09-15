@@ -1,0 +1,14 @@
+.input {
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+  font-size: 18px;
+  border-bottom: 2px solid $c-input-border;
+  padding: 10px 5px;
+  color: $c-input-color;
+
+  &::placeholder {
+    color: $c-input-placeholder;
+  }
+}
