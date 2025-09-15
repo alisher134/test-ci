@@ -1,0 +1,46 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  border: 1px solid $c-card-border;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+
+  &-checked {
+    text-decoration-line: line-through;
+  }
+
+  &-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &-title {
+    color: $c-card-text;
+    margin: 0;
+  }
+  
+  &-deadline {
+    color: $c-card-text;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  &-button {
+    display: flex;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
